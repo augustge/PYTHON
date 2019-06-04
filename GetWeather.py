@@ -9,6 +9,7 @@ URL = urlopen("http://www.yr.no/sted/Norge/Oslo/Oslo/Blindern_studenterhjem/")
 f = URL.readlines()
 URL.close()
 
+
 fancyprint = {	"red"			:	'\033[0;31m%s \033[1;m',
 				"LightGray"		:	'\033[0;37m%s \033[1;m',
 				"Alternative"	:	'\033[0;33m%s \033[1;m',
@@ -39,5 +40,3 @@ for line in f:
 			print fancyprint["LightGray"]%line.strip()
 		if '<table class=' in line:
 			Start = False
-
-
